@@ -19,9 +19,7 @@
     "noFallthroughCasesInSwitch": false,
     "paths": {
       "*": ["node_modules/*", "src/*"]
-    },
-    "noEmit": true,
-    "allowImportingTsExtensions": true
+    }
   },
   "include": ["src/**/*.ts", "test/**/*.ts"],
   "exclude": ["node_modules", "dist"]
