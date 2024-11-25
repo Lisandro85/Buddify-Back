@@ -1,10 +1,17 @@
-import { Body, Controller, Get, Param, ParseUUIDPipe, Post, Query } from "@nestjs/common";
-import { CreateActivityDto } from "./dtos/CreateActivity.dto";
-import { ActivityService } from "./activity.service";
-import { SearchActivitiesDto } from "./dtos/SearchActivitiesDto.dto";
+import {
+  Body,
+  Controller,
+  Get,
+  Param,
+  ParseUUIDPipe,
+  Post,
+  Query,
+} from '@nestjs/common';
+import { CreateActivityDto } from '../activities/dtos/CreateActivity.dto';
+import { ActivityService } from '../activities/activity.service';
+import { SearchActivitiesDto } from '../activities/dtos/SearchActivitiesDto.dto';
 
 @Controller('activities')
-
 export class ActivityController {
   constructor(private readonly activityService: ActivityService) {}
 
@@ -19,7 +26,9 @@ export class ActivityController {
   }
 
   @Post()
-  async create(@Body() createActivityDto: CreateActivityDto): Promise<{message:string}> {
+  async create(
+    @Body() createActivityDto: CreateActivityDto,
+  ): Promise<{ message: string }> {
     return this.activityService.create(createActivityDto);
   }
 
@@ -38,5 +47,4 @@ export class ActivityController {
   ) {
     return this.activityService.cancellActivity(activityId, userId);
   }
-
 }

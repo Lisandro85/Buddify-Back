@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Activity } from './activity.entity';
-import { ActivityController } from './activity.controller';
-import { ActivityService } from './activity.service';
-import { ActivityRepository } from './activity.repository';
+import { Activity } from '../activities/activity.entity';
+import { ActivityController } from '../activities/activity.controller';
+import { ActivityService } from '../activities/activity.service';
+import { ActivityRepository } from '../activities/activity.repository';
 import { Users } from '../users/users.entity';
 import { MailService } from '../mail/mail.service';
 import { Credentials } from '../credentials/credentials.entity';

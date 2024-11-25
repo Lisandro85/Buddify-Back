@@ -18,7 +18,7 @@ import { CreateUserDto } from '../users/dtos/CreateUser.dto';
 import { UsersService } from '../users/users.service';
 import { AuthService } from './auth.service';
 import { LoginUserDto } from '../users/dtos/LoginUser.dto';
-import { GoogleAuthGuard } from './guards/google-auth.guard';
+import { GoogleAuthGuard } from '../auth/guards/google-auth.guard';
 import * as dotenv from 'dotenv';
 import { MailService } from '../mail/mail.service';
 import { ChangePswDto } from '../users/dtos/ChangePsw.dto';

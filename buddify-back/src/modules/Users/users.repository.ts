@@ -5,14 +5,14 @@ import {
   UnauthorizedException,
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Users } from './users.entity';
+import { Users } from '../Users/users.entity';
 import { EntityManager, Repository } from 'typeorm';
-import { CreateUserDto } from './dtos/CreateUser.dto';
+import { CreateUserDto } from '../Users/dtos/CreateUser.dto';
 import { Credentials } from '../credentials/credentials.entity';
 import * as bcrypt from 'bcrypt';
 import { capitalizeWords } from '../../utils/capitalizeWords';
 import { MailService } from '../mail/mail.service';
-import { UpdateUserPremiumStatusDto } from './dtos/ChangeIsPremium';
+import { UpdateUserPremiumStatusDto } from '../Users/dtos/ChangeIsPremium';
 
 @Injectable()
 export class UsersRepository {
