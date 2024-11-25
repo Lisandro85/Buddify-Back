@@ -9,13 +9,16 @@
     "target": "ES2021",
     "sourceMap": true,
     "outDir": "./dist",
-    "baseUrl": "./",
+    "baseUrl": "./src",  // Cambiado para que apunte a la carpeta src
     "incremental": true,
     "skipLibCheck": true,
     "strictNullChecks": false,
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "*": ["node_modules/*", "src/*"]  // Para resolver los módulos en src
+    }
   }
 }
