@@ -1,9 +1,9 @@
 import { forwardRef, Module } from '@nestjs/common';
-import { UsersController } from '../Users/users.controller';
-import { UsersService } from '../Users/users.service';
+import { UsersController } from '../users/users.controller';
+import { UsersService } from '../users/users.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Users } from '../Users/users.entity';
-import { UsersRepository } from '../Users/users.repository';
+import { Users } from '../users/users.entity';
+import { UsersRepository } from '../users/users.repository';
 import { Credentials } from '../credentials/credentials.entity';
 import { MailModule } from '../mail/mail.module';
 import { AuthModule } from '../auth/auth.module';

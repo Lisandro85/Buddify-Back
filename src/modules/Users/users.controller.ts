@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Param, Patch, Post, Put } from '@nestjs/common';
-import { UsersService } from '../Users/users.service';
-import { UpdateUserDto } from '../Users/dtos/UpdateUser.dto';
-import { UpdateUserPremiumStatusDto } from '../Users/dtos/ChangeIsPremium';
+import { UsersService } from '../users/users.service';
+import { UpdateUserDto } from '../users/dtos/UpdateUser.dto';
+import { UpdateUserPremiumStatusDto } from '../users/dtos/ChangeIsPremium';
 
 @Controller('users')
 export class UsersController {

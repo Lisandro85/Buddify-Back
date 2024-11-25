@@ -25,7 +25,7 @@ import { ChangePswDto } from '../users/dtos/ChangePsw.dto';
 import { AuthGuard } from '../../guards/auth.guard';
 dotenv.config({ path: './.env.local' });
 import { JwtService } from '@nestjs/jwt';
-import { CompleteProfileDto } from '../Users/dtos/CompleteProfile.dto';
+import { CompleteProfileDto } from '../users/dtos/CompleteProfile.dto';
 
 @Controller('auth')
 export class AuthController {
