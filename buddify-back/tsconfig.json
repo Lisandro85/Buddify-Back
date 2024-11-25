@@ -9,7 +9,7 @@
     "target": "ES2021",
     "sourceMap": true,
     "outDir": "./dist",
-    "baseUrl": "./src",  // Cambiado para que apunte a la carpeta src
+    "baseUrl": "./src", // Base url es ./src para que resuelva desde allí
     "incremental": true,
     "skipLibCheck": true,
     "strictNullChecks": false,
@@ -18,7 +18,12 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
     "paths": {
-      "*": ["node_modules/*", "src/*"]  // Para resolver los módulos en src
+      "*": ["node_modules/*", "src/*"],
+      "@users/*": ["src/modules/users/*"], // Alias para usuarios
+      "@activities/*": ["src/modules/activities/*"], // Alias para actividades
+      "@auth/*": ["src/modules/auth/*"], // Alias para auth
+      "@stripe/*": ["src/modules/stripe/*"], // Alias para stripe
+      "@categories/*": ["src/modules/categories/*"] // Alias para categorias
     }
   }
 }
