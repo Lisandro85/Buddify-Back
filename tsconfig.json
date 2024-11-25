@@ -9,7 +9,7 @@
     "target": "ES2021",
     "sourceMap": true,
     "outDir": "./dist",
-    "baseUrl": "./src", // Asegúrate de que esté apuntando a 'src'
+    "baseUrl": ".", // Asegúrate de que esté apuntando a la raíz del proyecto
     "incremental": true,
     "skipLibCheck": true,
     "strictNullChecks": false,
@@ -18,7 +18,10 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
     "paths": {
-      "*": ["node_modules/*", "src/*"] // Esto asegura que las rutas relativas a 'src' sean resueltas correctamente
+      "@modules/*": ["src/modules/*"], // Alias para 'modules'
+      "*": ["node_modules/*", "src/*"] // Resolución de módulos
     }
-  }
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }
