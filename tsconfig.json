@@ -1,32 +1,26 @@
 {
   "compilerOptions": {
-    "module": "commonjs", // Usamos commonjs para la compatibilidad con Node.js
-    "declaration": true, // Genera archivos de declaración .d.ts
-    "removeComments": true, // Elimina los comentarios del código compilado
-    "emitDecoratorMetadata": true, // Habilita los metadatos de decoradores
-    "experimentalDecorators": true, // Habilita los decoradores experimentales
-    "allowSyntheticDefaultImports": true, // Permite importar módulos sin exportación por defecto
-    "target": "ES2021", // El código generado será compatible con ES2021
-    "sourceMap": true, // Genera mapas de fuente para depuración
-    "outDir": "./dist", // Salida de los archivos compilados
-    "baseUrl": "./src", // Asegura que las rutas relativas a 'src' se resuelvan correctamente
-    "incremental": true, // Habilita compilación incremental para mejorar el rendimiento
-    "skipLibCheck": true, // Omite la comprobación de tipos en las bibliotecas
-    "strictNullChecks": false, // Desactiva la comprobación estricta de null
-    "noImplicitAny": false, // Permite el uso de "any" implícito
-    "strictBindCallApply": false, // Desactiva las comprobaciones estrictas de bind/call/apply
-    "forceConsistentCasingInFileNames": false, // No es obligatorio que los nombres de archivos coincidan en mayúsculas/minúsculas
-    "noFallthroughCasesInSwitch": false, // Desactiva la comprobación de "fallthrough" en switch
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2021",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "/src",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
     "paths": {
-      "*": ["node_modules/*", "src/*"] // Asegura que las rutas dentro de 'src' sean resueltas correctamente
+      "*": ["node_modules/*", "src/*"]
     }
   },
-  "include": [
-    "src/**/*.ts", // Incluye todos los archivos .ts en el directorio src
-    "test/**/*.ts" // También incluye los archivos de prueba si están en el directorio test
-  ],
-  "exclude": [
-    "node_modules", // Excluye node_modules
-    "dist" // Excluye la carpeta dist
-  ]
+  "include": ["src/**/*.ts", "test/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }
