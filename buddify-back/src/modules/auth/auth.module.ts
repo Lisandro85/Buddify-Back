@@ -8,10 +8,10 @@ import { UsersService } from '../users/users.service';
 import { MailModule } from '../mail/mail.module';
 import { AuthService } from './auth.service';
 import { ConfigModule } from '@nestjs/config';
-import googleOathConfig from 'src/modules/auth/config/google-oath.config';
-import GoogleStrategy from './strategies/google.strategy';
+import googleOathConfig from '../auth/config/google-oath.config';
 import { JwtModule } from '@nestjs/jwt';
 import { UsersModule } from '../users/users.module';
+import GoogleStrategy from './strategies/google.strategy';
 
 @Module({
   imports: [

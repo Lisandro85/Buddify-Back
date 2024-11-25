@@ -10,7 +10,7 @@ import { EntityManager, Repository } from 'typeorm';
 import { CreateUserDto } from './dtos/CreateUser.dto';
 import { Credentials } from '../credentials/credentials.entity';
 import * as bcrypt from 'bcrypt';
-import { capitalizeWords } from 'src/utils/capitalizeWords';
+import { capitalizeWords } from '../../utils/capitalizeWords';
 import { MailService } from '../mail/mail.service';
 import { UpdateUserPremiumStatusDto } from './dtos/ChangeIsPremium';
 
