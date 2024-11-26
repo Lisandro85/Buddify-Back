@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Exponemos el puerto en el que la aplicación se ejecutará (puede variar según la configuración)
-EXPOSE 3001
+EXPOSE 3000
 
 # El comando para ejecutar la aplicación
 CMD ["node", "dist/main.js"]
