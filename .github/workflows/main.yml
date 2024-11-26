@@ -1,0 +1,32 @@
+name: Build and Push Docker Image
+
+on:
+  push:
+    branches:
+      - main  # O la rama principal de tu repositorio
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout del código fuente
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Log in to Docker Hub
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }} # Define este secreto en tu repositorio
+          password: ${{ secrets.DOCKERHUB_TOKEN }} # Define este secreto en tu repositorio
+
+      # Build la imagen de Docker
+      - name: Build Docker image
+        run: |
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/mi-imagen:latest .
+
+      # Push la imagen a Docker Hub
+      - name: Push Docker image
+        run: |
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/mi-imagen:latest
