@@ -29,8 +29,8 @@ async function bootstrap() {
   // const port = process.env.PORT ?? 3001;
   // await app.listen(port);
   // console.log(`Server listening on http://localhost:${port}`);
-  await app.listen(3001);
-  console.log('server listening on http://localhost:3001');
+  await app.listen(3000);
+  console.log('server listening on http://localhost:3000');
 }
 
 bootstrap();
