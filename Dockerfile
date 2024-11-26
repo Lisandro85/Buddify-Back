@@ -14,7 +14,6 @@ COPY . .
 RUN npm run build
 
 # Exponer el puerto
-EXPOSE 3001
-
+EXPOSE 3000
 # Comando de inicio
 CMD ["node", "dist/main.js"]
