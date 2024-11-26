@@ -1,16 +1,20 @@
-# Usa una imagen base
+# Dockerfile
 FROM node:20.14.0
 
-# Establece el directorio de trabajo dentro del contenedor
 WORKDIR /app
 
-# Copia los archivos de tu proyecto al contenedor
+# Copiar dependencias y configurar
 COPY package*.json ./
 RUN npm install
+
+# Copiar todo el código fuente
 COPY . .
 
-# Expone el puerto para que el contenedor esté accesible
+# Construir la aplicación
+RUN npm run build
+
+# Exponer el puerto
 EXPOSE 3000
 
-# Comando para ejecutar la aplicación
-CMD ["npm", "start"]
+# Comando de inicio
+CMD ["node", "dist/main.js"]
