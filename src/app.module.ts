@@ -1,15 +1,21 @@
 import { Module } from '@nestjs/common';
-import ormConfig from './config/ormConfig';
+import { typeOrmConfig } from './config/ormConfig';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersModule } from './modules/users/users.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { ActivityModule } from './modules/activities/Activity.module';
 import { CategoryModule } from './modules/categories/category.module';
 import { StripeModule } from './modules/stripe/stripe.module';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot(ormConfig),
+    ConfigModule.forRoot({ isGlobal: true, load: [typeOrmConfig] }),
+    TypeOrmModule.forRootAsync({
+      inject: [ConfigService],
+      useFactory: (configService: ConfigService) =>
+        configService.get('typeorm'),
+    }),
     UsersModule,
     AuthModule,
     ActivityModule,

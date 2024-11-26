@@ -1,5 +1,6 @@
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 import * as dotenv from 'dotenv';
+import { registerAs } from '@nestjs/config';
 
 dotenv.config({ path: './.env.local' });
 
@@ -15,4 +16,4 @@ const ormConfig: TypeOrmModuleOptions = {
   synchronize: true,
   dropSchema: false,
 };
-export default ormConfig;
+export const typeOrmConfig = registerAs('typeorm', () => ormConfig);
