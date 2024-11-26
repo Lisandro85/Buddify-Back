@@ -9,9 +9,7 @@ async function bootstrap() {
 
   app.useGlobalPipes(new ValidationPipe());
   app.use(loggerGblobal);
-  app.enableCors()
-
-  
+  app.enableCors();
 
   const swaggerConfig = new DocumentBuilder()
     .setTitle('Buddify')
@@ -28,9 +26,11 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, swaggerConfig);
   SwaggerModule.setup('api', app, document);
 
-  const port = process.env.PORT ?? 3001;
-  await app.listen(port);
-  console.log(`Server listening on http://localhost:${port}`);
+  // const port = process.env.PORT ?? 3001;
+  // await app.listen(port);
+  // console.log(`Server listening on http://localhost:${port}`);
+  await app.listen(3001);
+  console.log('server listening on http://localhost:3001');
 }
 
 bootstrap();
