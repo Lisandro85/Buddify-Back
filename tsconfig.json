@@ -16,8 +16,8 @@
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
-  },
-  "include": ["src/**/*.ts", "test/**/*.ts"],
-  "exclude": ["node_modules", "dist"]
+    "noFallthroughCasesInSwitch": false,
+    "resolveJsonModule": true,
+    "types": ["multer", "jest"]
+  }
 }

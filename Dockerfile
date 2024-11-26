@@ -1,16 +1,13 @@
-# Usa una imagen base
-FROM node:18
+FROM node:20.14.0
 
-# Establece el directorio de trabajo dentro del contenedor
 WORKDIR /app
 
-# Copia los archivos de tu proyecto al contenedor
 COPY package*.json ./
-RUN npm install
+
+RUN npm install 
+
 COPY . .
 
-# Expone el puerto para que el contenedor esté accesible
 EXPOSE 3001
 
-# Comando para ejecutar la aplicación
-CMD ["npm", "start"]
+CMD ["npm","run","start"]
