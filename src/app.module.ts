@@ -18,5 +18,6 @@ import { StripeModule } from './modules/stripe/stripe.module';
   ],
   controllers: [],
   providers: [],
+  exports: [UsersModule],
 })
 export class AppModule {}
