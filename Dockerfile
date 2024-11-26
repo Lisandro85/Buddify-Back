@@ -10,7 +10,7 @@ RUN npm install
 COPY . .
 
 # Expone el puerto para que el contenedor esté accesible
-EXPOSE 3000
+EXPOSE 3001
 
 # Comando para ejecutar la aplicación
 CMD ["npm", "start"]
